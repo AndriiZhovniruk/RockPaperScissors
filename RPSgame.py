@@ -10,6 +10,9 @@ VICTORIES = {
 
 
 def get_user_selection(actions):
+    """
+    user enter his choise
+    """
     choices = [f"{actions[action]}[{action}]" for action in actions]
     choices_str = ", ".join(choices)
     selection = int(input(f"Enter a choice ({choices_str}): "))
@@ -18,6 +21,9 @@ def get_user_selection(actions):
 
 
 def get_computer_selection(actions):
+    """
+    compurter making a random choise
+    """
     selection = random.randint(0, len(actions) - 1)
     action = actions[selection]
     return action
